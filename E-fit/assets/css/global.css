@@ -10,7 +10,8 @@
     --vermelho-tabela-IMC: #FF2525;
 }
 
-h1 {
+body {
+    overflow-y: hidden;
     font-family: "Epilogue", sans-serif;
-    font-weight: 700;
 }
+
