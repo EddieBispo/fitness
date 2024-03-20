@@ -1,6 +1,6 @@
 :root {
-    --verde-escuro: #1A3327;
-    --verde-mais-escuro: #0C1717;
+    --verde: #1A3327;
+    --verde-escuro: #0C1717;
     --verde-claro: #08A57C;
     --branco: #F2F6F2;
 
@@ -9,3 +9,9 @@
     --laranja-tabela-IMC: #FF7A00;
     --vermelho-tabela-IMC: #FF2525;
 }
+
+body {
+    overflow-y: hidden;
+    font-family: "Epilogue", sans-serif;
+}
+
