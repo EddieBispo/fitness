@@ -19,3 +19,6 @@ body {
     font-family: "Epilogue", sans-serif;
 }
 
+.nav-pills .nav-link.active{
+    background-color: #08A57C;
+}
