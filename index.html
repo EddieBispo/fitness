@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/header-style.css">
     <link rel="stylesheet" href="assets/css/contTabelaIMC-style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/styleTreino.css">
+    <link rel="stylesheet" href="assets/css/saude-bem-star.css">
+    <link rel="stylesheet" href="assets/css/elemento-oculto.css">
     <title>E-fit</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -22,8 +33,10 @@
         <section>
             <article id="containerTextoApresentacao">
                 <h1>Bem-vindo ao E-fit!</h1>
-                <p>Calcule seu Índice de Massa Corporal (IMC) agora mesmo ao lado. Nossa calculadora simples fornece uma avaliação imediata do seu peso e saúde.</p>
-                <p>Explore nossas receitas saudáveis, planos de treino personalizados para ajudá-lo em sua jornada de saúde e fitness.</p>
+                <p>Calcule seu Índice de Massa Corporal (IMC) agora mesmo ao lado. Nossa calculadora simples fornece uma
+                    avaliação imediata do seu peso e saúde.</p>
+                <p>Explore nossas receitas saudáveis, planos de treino personalizados para ajudá-lo em sua jornada de
+                    saúde e fitness.</p>
                 <p>Comece hoje mesmo a construir um estilo de vida mais saudável e feliz com E-fit!</p>
             </article>
 
@@ -45,122 +58,193 @@
         </section>
     </header>
 
-    <section class="contTabelaIMC">
-        <div class="tabelaIMC">
-            <div class="IMC imcRetornadoUsuario" id="abaixoPeso">
-                <h2>Abaixo do peso</h2>
-                <p>Menor que 18,5</p>
+    <section class="elemento-oculto">
+        <section class="contTabelaIMC">
+            <div class="tabelaIMC">
+                <div class="IMC imcRetornadoUsuario" id="abaixoPeso">
+                    <h2>Abaixo do peso</h2>
+                    <p>Menor que 18,5</p>
+                </div>
+                <div class="IMC" id="pesoIdeal">
+                    <h2>Peso ideal</h2>
+                    <p>18,5 - 24,9</p>
+                </div>
+                <div class="IMC" id="sobrepeso">
+                    <h2>Sobrepeso</h2>
+                    <p>20,0 - 30,0</p>
+                </div>
+                <div class="IMC" id="obeso">
+                    <h2>Obeso</h2>
+                    <p>Maior que 30,1</p>
+                </div>
             </div>
-            <div class="IMC" id="pesoIdeal">
-                <h2>Peso ideal</h2>
-                <p>18,5 - 24,9</p>
+            <div class="informacoesUsuario">
+                <div class="dadosUsuario" id="cardImcUsuario">
+                    <h2>SEU IMC</h2>
+                    <p id="imcUsuario">--</p>
+                </div>
+                <div class="dadosUsuario" id="cardAlturaUsuario">
+                    <h2>SUA ALTURA</h2>
+                    <p id="alturaUsuario">--</p>
+                </div>
+                <div class="dadosUsuario" id="cardPesoUsuario">
+                    <h2>SEU PESO</h2>
+                    <p id="pesoUsuario">--</p>
+                </div>
             </div>
-            <div class="IMC" id="sobrepeso">
-                <h2>Sobrepeso</h2>
-                <p>20,0 - 30,0</p>
-            </div>
-            <div class="IMC" id="obeso">
-                <h2>Obeso</h2>
-                <p>Maior que 30,1</p>
-            </div>
-        </div>
+            <article class="infImcRetornado">
+                <h2 id="tituloImcRetornado"></h2>
+                <p id="textoImcRetornado"></p>
+            </article>
+        </section>
+        <section class="saude-bem-star">
+            <div>
 
-        <div class="informacoesUsuario">
-            <div class="dadosUsuario" id="cardImcUsuario">
-                <h2>SEU IMC</h2>
-                <p id="imcUsuario">--</p>
             </div>
-            <div class="dadosUsuario" id="cardAlturaUsuario">
-                <h2>SUA ALTURA</h2>
-                <p id="alturaUsuario">--</p>
-            </div>
-            <div class="dadosUsuario" id="cardPesoUsuario">
-                <h2>SEU PESO</h2>
-                <p id="pesoUsuario">--</p>
-            </div>
-        </div>
+            <article>
+                <p>
+                    Manter um peso saudável é crucial para o bem-estar físico e mental. Um peso adequado está associado
+                    a diversos benefícios, como menor risco de doenças crônicas e melhoria da qualidade de vida. Além
+                    disso, impacta positivamente na autoestima e na capacidade de realizar atividades diárias com mais
+                    facilidade e vitalidade.
+                </p>
 
-        <article class="infImcRetornado">
-            <h2 id="tituloImcRetornado"></h2>
-            <p id="textoImcRetornado">
-                
-            </p>
+                <p>
+                    Para alcançar e manter um peso saudável, é fundamental adotar uma abordagem equilibrada que englobe
+                    tanto a alimentação quanto a prática regular de exercícios físicos. Uma dieta balanceada, composta
+                    por uma variedade de alimentos nutritivos, como frutas, vegetais, grãos integrais e proteínas
+                    magras, fornece os nutrientes essenciais para o corpo funcionar adequadamente.
+                </p>
+                <p>
+                    Quanto aos exercícios, uma rotina que inclua atividades aeróbicas, como caminhada, corrida, natação
+                    e ciclismo, aliadas a exercícios de resistência, como musculação e treinamento de força, contribui
+                    para a queima de calorias, fortalecimento muscular e melhoria da saúde cardiovascular.
+                </p>
+            </article>
+        </section>
+        <section>
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-DicaAlimentacao-tab" data-toggle="pill"
+                        href="#pills-DicaAlimentacao" role="tab" aria-controls="pills-DicaAlimentacao"
+                        aria-selected="true">Dicas de Alimentação</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-dicaTreino-tab" data-toggle="pill" href="#pills-dicaTreino" role="tab"
+                        aria-controls="pills-dicaTreino" aria-selected="false">Dicas de Treinos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                        aria-controls="pills-contact" aria-selected="false">Contato</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-DicaAlimentacao" role="tabpanel"
+                    aria-labelledby="pills-DicaAlimentacao-tab">
+                    <div class="container-treino">
+                        <div class="card-treino" id="abdomen">
+                            <article>
+                                <h2>Abdômen</h2>
+                                <p>
+                                    Desenvolva um núcleo forte e definido com nossa série de exercícios para o abdômen.
+                                    Conquiste estabilidade e equilíbrio para seus movimentos diários.
+                                </p>
+                            </article>
+                            <button>COMEÇAR</button>
+                        </div>
+                        <div class="card-treino" id="superiores">
+                            <article>
+                                <h2>Superiores</h2>
+                                <p>
+                                    Fortaleça seus braços, ombros e costas com nossa série de exercícios para membros
+                                    superiores. Alcance sua melhor forma e ganhe força.
+                                </p>
+                            </article>
+                            <button>COMEÇAR</button>
+                        </div>
+                        <div class="card-treino" id="perna">
+                            <article>
+                                <h2>Pernas</h2>
+                                <p>
+                                    Fortaleça suas pernas e aumente sua resistência com nossa série de exercícios para
+                                    pernas. Conquiste poder e agilidade para enfrentar qualquer desafio.
+                                </p>
+                            </article>
+                            <button>COMEÇAR</button>
+                        </div>
+                        <div class="card-treino" id="peito">
+                            <article>
+                                <h2>Peito</h2>
+                                <p>
+                                    Aprimore seu peitoral e fortaleça seu core com nossos exercícios dedicados ao peito.
+                                    Transforme seu corpo e melhore sua postura.
+                                </p>
+                            </article>
+                            <button>COMEÇAR</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-dicaTreino" role="tabpanel" aria-labelledby="pills-dicaTreino-tab">
 
-        </article>
+                    <div class="container-treino">
+                        <div class="card-treino" id="abdomen">
+                            <article>
+                                <h2>Abdômen</h2>
+                                <p>
+                                    Desenvolva um núcleo forte e definido com nossa série de exercícios para o abdômen.
+                                    Conquiste estabilidade e equilíbrio para seus movimentos diários.
+                                </p>
+                            </article>
+                            <button>COMEÇAR</button>
+                        </div>
+                        <div class="card-treino" id="superiores">
+                            <article>
+                                <h2>Superiores</h2>
+                                <p>
+                                    Fortaleça seus braços, ombros e costas com nossa série de exercícios para membros
+                                    superiores. Alcance sua melhor forma e ganhe força.
+                                </p>
+                            </article>
+                            <button>COMEÇAR</button>
+                        </div>
+                        <div class="card-treino" id="perna">
+                            <article>
+                                <h2>Pernas</h2>
+                                <p>
+                                    Fortaleça suas pernas e aumente sua resistência com nossa série de exercícios para
+                                    pernas. Conquiste poder e agilidade para enfrentar qualquer desafio.
+                                </p>
+                            </article>
+                            <button>COMEÇAR</button>
+                        </div>
+                        <div class="card-treino" id="peito">
+                            <article>
+                                <h2>Peito</h2>
+                                <p>
+                                    Aprimore seu peitoral e fortaleça seu core com nossos exercícios dedicados ao peito.
+                                    Transforme seu corpo e melhore sua postura.
+                                </p>
+                            </article>
+                            <button>COMEÇAR</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </section>
-    <!-- botões abaixo do peso -->
-    <section class="abaixoPeso">
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="pills-DicaAlimentacao-tab" data-toggle="pill" href="#pills-DicaAlimentacao" role="tab" aria-controls="pills-DicaAlimentacao" aria-selected="true">Dicas de Alimentação</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="pills-dicaTreino-tab" data-toggle="pill" href="#pills-dicaTreino" role="tab" aria-controls="pills-dicaTreino" aria-selected="false">Dicas de Treinos</a>
-            </li>
-          </ul>
-
-          <!-- texto dicas de alimentação -->
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-DicaAlimentacao" role="tabpanel" aria-labelledby="pills-DicaAlimentacao-tab">
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sit doloremque cumque, eos unde, reprehenderit hic incidunt dicta cum provident quis qui tenetur voluptatum deserunt voluptatibus suscipit dignissimos officiis dolores?</h2>
-            </div>
-            <!-- texto dicas de treino -->
-            <div class="tab-pane fade" id="pills-dicaTreino" role="tabpanel" aria-labelledby="pills-dicaTreino-tab">
-                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum eum maxime dolores adipisci atque eligendi facere, minus rem minima repellat voluptas quae possimus temporibus at exercitationem. Dicta mollitia alias doloremque.</h2>
-            </div>
-            
-          </div>
-    </section>
-    <!-- botões peso ideal -->
-    <section class="pesoIdeal">
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="pills-DicaAlimentacao-tab" data-toggle="pill" href="#pills-DicaAlimentacao" role="tab" aria-controls="pills-DicaAlimentacao" aria-selected="true">Dicas de Alimentação</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="pills-dicaTreino-tab" data-toggle="pill" href="#pills-dicaTreino" role="tab" aria-controls="pills-dicaTreino" aria-selected="false">Dicas de Treinos</a>
-            </li>
-          </ul>
-
-          <!-- texto dicas de alimentação -->
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-DicaAlimentacao" role="tabpanel" aria-labelledby="pills-DicaAlimentacao-tab">
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sit doloremque cumque, eos unde, reprehenderit hic incidunt dicta cum provident quis qui tenetur voluptatum deserunt voluptatibus suscipit dignissimos officiis dolores?</h2>
-            </div>
-            <!-- texto dicas de treino -->
-            <div class="tab-pane fade" id="pills-dicaTreino" role="tabpanel" aria-labelledby="pills-dicaTreino-tab">
-                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum eum maxime dolores adipisci atque eligendi facere, minus rem minima repellat voluptas quae possimus temporibus at exercitationem. Dicta mollitia alias doloremque.</h2>
-            </div>
-            
-          </div>
-    </section>
-    <!-- botões acima do peso -->
-    <section class="sobrePeso">
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="pills-DicaAlimentacao-tab" data-toggle="pill" href="#pills-DicaAlimentacao" role="tab" aria-controls="pills-DicaAlimentacao" aria-selected="true">Dicas de Alimentação</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="pills-dicaTreino-tab" data-toggle="pill" href="#pills-dicaTreino" role="tab" aria-controls="pills-dicaTreino" aria-selected="false">Dicas de Treinos</a>
-            </li>
-          </ul>
-
-          <!-- texto dicas de alimentação -->
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-DicaAlimentacao" role="tabpanel" aria-labelledby="pills-DicaAlimentacao-tab">
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sit doloremque cumque, eos unde, reprehenderit hic incidunt dicta cum provident quis qui tenetur voluptatum deserunt voluptatibus suscipit dignissimos officiis dolores?</h2>
-            </div>
-            <!-- texto dicas de treino -->
-            <div class="tab-pane fade" id="pills-dicaTreino" role="tabpanel" aria-labelledby="pills-dicaTreino-tab">
-                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum eum maxime dolores adipisci atque eligendi facere, minus rem minima repellat voluptas quae possimus temporibus at exercitationem. Dicta mollitia alias doloremque.</h2>
-            </div>
-            
-          </div>
-    </section>
-
     <script src="assets/js/scriptCalculadora.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
 </body>
+
 </html>

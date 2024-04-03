@@ -1,0 +1,77 @@
+:root {
+    --verde: #1A3327;
+    --verde-escuro: #0C1717;
+    --verde-claro: #08A57C;
+    --branco: #F2F6F2;
+
+    --amarelo-tabela-IMC: #e6d012;
+    --verde-tabela-IMC: #276648;
+    --laranja-tabela-IMC: #FF7A00;
+    --vermelho-tabela-IMC: #FF2525;
+}
+
+
+.container-treino {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+
+.card-treino {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    width: 360px;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+#abdomen {
+    background-image:linear-gradient(to top, rgba(0, 0, 0, 0.733) 40%, transparent 80%), url(/images/abdômen.jpg);
+}
+
+#superiores {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.733) 40%, transparent 80%), url(/images/braço.webp);
+}
+
+#perna {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.733) 40%, transparent 80%), url(/images/pernas.jpg);
+}
+
+#peito {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.733) 40%, transparent 80%), url(/images/peito.webp);
+}
+
+.card-treino article {
+    width: 320px;
+    color: #fff;
+}
+
+
+
+.card-treino button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: var(--verde-claro);
+    font-size: 20px;
+    font-weight: 600px;
+}
+
+
