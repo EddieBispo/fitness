@@ -17,16 +17,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    
     height: 100vh;
     gap: 30px;
     margin-bottom: 50px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 
 .tabelaIMC {
     display: flex;
+    flex-direction: row;
     border-radius: 10px;
     box-shadow: 0px 4px 10px hsla(0, 0%, 0%, 0.466);
 }
@@ -119,3 +120,78 @@
 }
 
 
+@media screen and (max-width: 940px) {
+    .IMC {
+        width: 175px;
+    }
+
+    .IMC > h2 {
+        font-size: 20px;
+    }
+
+    .IMC > p {
+        font-size: 16px !important;
+    }
+
+    .informacoesUsuario {
+        max-width: 700px;
+        width: 100%;
+    }
+
+    .dadosUsuario {
+        border: none;
+        box-shadow: none;
+    }
+
+    #cardAlturaUsuario {
+        border-left: solid rgba(0, 0, 0, 0.253);
+        border-right: solid rgba(0, 0, 0, 0.253);
+        border-radius: 0;
+    }
+
+    .infImcRetornado {
+        max-width: 700px;
+        width: 100%;
+        padding: 50px;
+    }
+
+    #tituloImcRetornado {
+        font-size: 30px;
+    }
+
+    #textoImcRetornado {
+        max-width: 600px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 730px) {
+    .IMC {
+        width: 100px;
+    }
+
+    .IMC > h2 {
+        font-size: 16px;
+        text-align: center;
+        font-weight: 800;
+    }
+
+    .IMC > p {
+        font-size: 12px !important;
+    }
+
+    .dadosUsuario {
+        height: 80px;
+    }
+
+    .dadosUsuario > h2 {
+        color: var(--verde-claro);
+        font-size: 16px !important;
+    }
+
+    .infImcRetornado {
+        padding: 20px;
+    }
+}
